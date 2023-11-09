@@ -40,6 +40,18 @@ const hostname = `127.0.0.1`
 app.use(express.static('public'))
 import { engine } from 'express-handlebars';
 
+import mongoose from 'mongoose';
+import Post from './models/post.js';
+
+// MongoDB bağlantısı
+mongoose.connect('mongodb://127.0.0.1/nodeblog_test_db', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+
+
+
+
 
 
 app.engine('handlebars', engine());
