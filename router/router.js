@@ -3,42 +3,51 @@ const router=express.Router();
 
 
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.render("site/index")
    
    });
    
+   
 
    
-   app.get('/about', (req, res) => {
+   router .get('/about', (req, res) => {
      res.render("site/about")
     
     });
     
     
    
-    app.get('/login', (req, res) => {
+    router.get('/login', (req, res) => {
      res.render("site/login")
     
     });
-    app.get('/register', (req, res) => {
+    router.get('/register', (req, res) => {
      res.render("site/register")
     
     });
    
    
-    app.get('/blog', (req, res) => {
+    router.get('/blog', (req, res) => {
      res.render("site/blog")
     
     });
-    app.get('/contact', (req, res) => {
+    router.get('/contact', (req, res) => {
      res.render("site/contact")
     
     });
-    app.get('/blog-single', (req, res) => {
+    router.get('/blog-single', (req, res) => {
      res.render("site/blog-single")
     
     });
+    
+
+
+
+
+
+    
+export default router;
    
    
    

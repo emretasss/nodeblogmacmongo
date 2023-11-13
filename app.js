@@ -58,9 +58,9 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 
 
-
-
-
+import router from './router/router.js';
+const main=router;
+app.use('/',main);
 
 
 
