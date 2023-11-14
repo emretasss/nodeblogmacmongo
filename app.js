@@ -51,17 +51,11 @@ app.use(bodyParser.json())
 
 
 
-
-
-
 // MongoDB bağlantısı
 mongoose.connect('mongodb://127.0.0.1/nodeblog_test_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-
-
-
 
 
 
@@ -75,10 +69,6 @@ import posts from './models/posts.js';
 
 const main=router;
 app.use('/',main);
-
-
-
-
 
 
 app.listen(port, () => {

@@ -44,19 +44,19 @@ mongoose.connect('mongodb://127.0.0.1/nodeblog_test_db', {
   //   console.error('Error Creating BlogPost:', error);
   // });
 
-  .then(() => {
-    console.log('Connected to MongoDB');
+  // .then(() => {
+  //   console.log('Connected to MongoDB');
     
-    // Post oluşturma
-    return Post.findByIdAndDelete(("654e693489a6ecd56108ccdb"),{
+  //   // Post oluşturma
+  //   return Post.findByIdAndDelete(("654e693489a6ecd56108ccdb"),{
     
-    });
-  })
-  .then((post) => {
-    console.log("BlogPost created successfully:", post);
-  })
-  .catch((error) => {
-    console.error('Error Creating BlogPost:', error);
-  });
+  //   });
+  // })
+  // .then((post) => {
+  //   console.log("BlogPost created successfully:", post);
+  // })
+  // .catch((error) => {
+  //   console.error('Error Creating BlogPost:', error);
+  // });
 
   
