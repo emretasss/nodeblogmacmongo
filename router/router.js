@@ -40,6 +40,7 @@ router.get('/', (req, res) => {
      res.render("site/blog-single")
     
     });
+   
     
 
 

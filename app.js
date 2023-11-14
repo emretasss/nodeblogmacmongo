@@ -41,7 +41,18 @@ app.use(express.static('public'))
 import { engine } from 'express-handlebars';
 
 import mongoose from 'mongoose';
-import Post from './models/post.js';
+import bodyParser from 'body-parser';
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
+
+
+
+
 
 // MongoDB bağlantısı
 mongoose.connect('mongodb://127.0.0.1/nodeblog_test_db', {
@@ -59,6 +70,9 @@ app.set('view engine', 'handlebars');
 
 
 import router from './router/router.js';
+import posts from './models/posts.js';
+
+
 const main=router;
 app.use('/',main);
 

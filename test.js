@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import Post from './models/post.js';
+import Post from './models/posts.js';
 
 // MongoDB bağlantısı
 mongoose.connect('mongodb://127.0.0.1/nodeblog_test_db', {
