@@ -1,6 +1,6 @@
 import express from 'express';
 const router=express.Router();
-
+import post from '../models/post.js';
 
 
     router.get('/new', (req, res) => {
@@ -8,7 +8,7 @@ const router=express.Router();
      
      });
      router.post('/test', (req, res) => {
-      console.log(req.body);
+      post.create(req.body)
       res.redirect("/")
      
      });
