@@ -1,7 +1,5 @@
 import express from 'express';
 const router=express.Router();
-
-
     router.get('/posts/new', (req, res) => {
       res.render("site/addpost")
      
@@ -12,11 +10,6 @@ const router=express.Router();
      
      });
     
-
-
-
-
-
     
 export default router;
    
