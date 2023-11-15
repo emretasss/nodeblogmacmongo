@@ -49,7 +49,8 @@ mongoose.connect('mongodb://127.0.0.1/nodeblog_test_db', {
     
     // Post oluşturma
     return Post.findByIdAndDelete(("6554da45ad26dc52689a10c8"),{
-    
+      
+      
     });
   })
   .then((post) => {
