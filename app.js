@@ -68,7 +68,7 @@ import posts from './router/posts.js';
 
 const main=router;
 app.use('/',main);
-app.use('/posts',posts );
+app.use('/posts',posts);
 
 
 app.listen(port, () => {
