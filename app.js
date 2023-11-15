@@ -43,12 +43,6 @@ import { engine } from 'express-handlebars';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-
-// parse application/json
-app.use(bodyParser.json())
-
 
 
 // MongoDB bağlantısı
@@ -63,12 +57,18 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 
 
-import router from './router/router.js';
-import posts from './models/posts.js';
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
+// parse application/json
+app.use(bodyParser.json())
+
+import router from './router/router.js';
+import posts from './router/posts.js';
 
 const main=router;
 app.use('/',main);
+app.use('/posts',posts );
 
 
 app.listen(port, () => {
