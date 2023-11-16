@@ -64,6 +64,8 @@ app.use(bodyParser.json())
 import router from './router/router.js';
 import posts from './router/posts.js';
 
+import post from './models/post.js';
+
 const main=router;
 app.use('/',main);
 app.use('/posts',posts);
