@@ -42,7 +42,6 @@ import { engine } from 'express-handlebars';
 
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import post from './models/post.js';
 
 
 
@@ -64,6 +63,8 @@ app.use(bodyParser.json())
 
 import router from './router/router.js';
 import posts from './router/posts.js';
+
+import post from './models/post.js';
 
 const main=router;
 app.use('/',main);
