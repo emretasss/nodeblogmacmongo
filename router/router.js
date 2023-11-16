@@ -2,7 +2,7 @@ import express from 'express';
 const router=express.Router();
 
 
-import post from '../models/post';
+import post from '../models/post.js';
 router.get('/', (req, res) => {
     res.render("site/index")
    
@@ -20,7 +20,14 @@ router.get('/', (req, res) => {
     
     });      
     router.get('/blog', (req, res) => {
-     res.render("site/blog")
+      
+      const posts = post.find({}).then(posts=>{
+
+        res.render("site/blog",{posts:posts});
+
+        })
+        
+
     
     });
     router.get('/contact', (req, res) => {
