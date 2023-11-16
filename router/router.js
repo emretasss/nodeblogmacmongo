@@ -1,5 +1,8 @@
 import express from 'express';
 const router=express.Router();
+
+
+import post from '../models/post';
 router.get('/', (req, res) => {
     res.render("site/index")
    
