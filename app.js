@@ -51,8 +51,6 @@ mongoose.connect('mongodb://127.0.0.1/nodeblog_test_db', {
   useUnifiedTopology: true
 })
 
-
-
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 
