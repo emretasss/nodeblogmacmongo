@@ -26,9 +26,7 @@ router.get('/', (req, res) => {
         res.render("site/blog",{posts:posts});
 
         })
-        
-
-    
+            
     });
     router.get('/contact', (req, res) => {
      res.render("site/contact")
